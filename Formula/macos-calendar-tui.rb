@@ -1,8 +1,8 @@
 class MacosCalendarTui < Formula
   desc "Read-only terminal agenda for macOS Calendar"
   homepage "https://github.com/matheuseabra/google-calendar-tui-macos"
-  url "https://github.com/matheuseabra/google-calendar-tui-macos/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "a2c7bcbf1ba84c80b4fe0dc041a39396d498da90bc0576b31736f7286081c2db"
+  url "https://github.com/matheuseabra/google-calendar-tui-macos/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "20215c20deb3bc1be4f3fc25d9fbae80ab3ecc82312d900c01e27f223061e403"
   license "MIT"
 
   depends_on "rust" => :build
@@ -13,6 +13,6 @@ class MacosCalendarTui < Formula
   end
 
   test do
-    assert_match "macos-calendar-tui 0.2.0", shell_output("#{bin}/macos-calendar-tui --version")
+    assert_match "macos-calendar-tui 0.2.1", shell_output("#{bin}/macos-calendar-tui --version")
   end
 end
