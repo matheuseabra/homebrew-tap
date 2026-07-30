@@ -9,7 +9,7 @@ class MacosCalendarTui < Formula
   depends_on :macos
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "."), "--locked"
+    system "cargo", "install", *std_cargo_args(path: ".")
   end
 
   test do
