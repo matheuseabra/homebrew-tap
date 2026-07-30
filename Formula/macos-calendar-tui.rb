@@ -5,8 +5,8 @@ class MacosCalendarTui < Formula
   sha256 "a2c7bcbf1ba84c80b4fe0dc041a39396d498da90bc0576b31736f7286081c2db"
   license "MIT"
 
-  depends_on :macos
   depends_on "rust" => :build
+  depends_on :macos
 
   def install
     system "cargo", "install", *std_cargo_args(path: "."), "--locked"
