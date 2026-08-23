@@ -4,11 +4,11 @@ class Mbtop < Formula
   license "MIT"
 
   if Hardware::CPU.arm?
-    url "https://github.com/matheuseabra/mbtop/releases/download/v0.1.0/mbtop-v0.1.0-aarch64-apple-darwin.tar.gz"
-    sha256 "64ff63520dfb278ded6f96fdf1c3ac8d5d8f0fbe9dd282c8dbbaa927a1ba247b"
+    url "https://github.com/matheuseabra/mbtop/releases/download/v0.1.1/mbtop-v0.1.1-aarch64-apple-darwin.tar.gz"
+    sha256 "712d457fcf836111a6e7b2215619b3134a8bb768d4983ccb6eae40a636667641"
   else
-    url "https://github.com/matheuseabra/mbtop/releases/download/v0.1.0/mbtop-v0.1.0-x86_64-apple-darwin.tar.gz"
-    sha256 "6277760d7356957eeb11901f1db5aa5cb0b9ed527954785da7072c38b65df597"
+    url "https://github.com/matheuseabra/mbtop/releases/download/v0.1.1/mbtop-v0.1.1-x86_64-apple-darwin.tar.gz"
+    sha256 "7842bdae0b9751ca3fd5e22553bb520d04b999f919bf4a2f31e9521c61387602"
   end
 
   depends_on :macos
@@ -18,6 +18,6 @@ class Mbtop < Formula
   end
 
   test do
-    assert_match "mbtop 0.1.0", shell_output("#{bin}/mbtop --version")
+    assert_match "mbtop 0.1.1", shell_output("#{bin}/mbtop --version")
   end
 end
